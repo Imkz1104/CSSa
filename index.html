@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset="utf-8">
+<style>
+.p1 {
+  animation-duration: 5s; 
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  background-color:#f950ff;
+}
+
+   @keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.p2 {
+	animation: 5s infinite alternate slidein;
+	background-color:#fcff50;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 90%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.p3 {
+  animation: zoom 5s infinite  forwards;
+  background-color:#5fff50;
+}
+ 
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.p4 
+   {
+    background-color:#50f3ff;
+    animation: fadedown;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes fadedown {
+from {
+    opacity: 0;
+    transform: translateY(0);
+}
+to {
+    opacity: 1;
+    transform: translateY(20px);
+}
+}
+.p5  { animation: hane 5s infinite;
+	 background-color:#ff8250;
+  opacity: 1;
+}
+@keyframes hane {
+  0%, 40% {
+    transform: skew(0deg, 0deg);
+  }
+  5% {
+    transform: skew(5deg, 5deg);
+  }
+  10% {
+    transform: skew(-4deg, -4deg);
+  }
+  15% {
+    transform: skew(3deg, 3deg);
+  }
+  20% {
+    transform: skew(-2deg, -2deg);
+  }
+  25% {
+    transform: skew(1deg, 1deg);
+  }
+  30% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  35% {
+    transform: skew(0.3deg, 0.3deg);
+  }
+}
+
+.p6 {
+	background-color:#aed5d8;
+  color: #000000;
+  transition: 0.1s;
+}
+.p6:hover {
+  color: #ff0000;
+}
+
+.p7 {
+
+  color: rgb(0, 0, 0);
+  background-color: #2196f3;
+
+  position: relative;
+ 
+  transition: background-color 0.1s;
+}
+.p7:hover {
+  background-color: #f664c5;
+}
+.p7:active {
+  background-color: #ff0800;
+  
+}
+
+
+  </style>
+<title>シンプルサンプル</title>
+
+	</head>
+	<body>
+		<h1>CSSアニメーションのサンプルをまとめました。アニメーション部分のソースコードも記述しています。</h1>
+		
+		<h2>１．右から左にテキストがスライドしてくるアニメーション</h2>
+		<div class="d1">
+			<p class="p1">テキスト</p>
+			<h4>ソースコード＞.p1 {
+				  animation-duration: 5s;
+				  animation-name: slidein;
+				  animation-iteration-count: infinite;
+				  background-color:#f950ff;
+				}
+				   @keyframes slidein {
+				  from {
+					margin-left: 100%;
+				  }
+				  to {
+					margin-left: 0%;
+				  }
+				}
+			</h4>
+		<h2>２．左右に往復するアニメーション</h2>
+			<p class="p2">テキスト</p>
+			<h4>ソースコード＞
+
+				.p2 {
+					animation: 5s infinite alternate slidein;
+					background-color:#fcff50;
+				}
+				@keyframes slidein {
+				  from {
+					margin-left: 90%;
+				  }
+				  to {
+					margin-left: 0%;
+				  }
+				}
+			</h4>
+        <h2>３．文字が浮かび上がるようなアニメーション</h2>
+			<p class="p3">テキスト</p>
+			<h4>ソースコード＞
+
+				.p3 {
+				  animation: zoom 5s infinite forwards;
+				  background-color:#5fff50;
+				}
+				 
+				@keyframes zoom {
+				  0% {
+					opacity: 0;
+				  }
+				  100% {
+					opacity: 1;
+				  }
+				}
+			</h4>
+		<h2>４．文字が上から降りてくるようなアニメーション</h2>
+			<p class="p4">テキスト</p>
+			<h4>ソースコード＞
+
+				.p4
+				   {
+					background-color:#50f3ff;
+					animation: fadedown;
+					animation-duration: 5s;
+					animation-iteration-count: infinite;
+				}
+				@keyframes fadedown {
+				from {
+					opacity: 0;
+					transform: translateY(0);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(20px);
+				}
+				}
+			</h4>
+　　　　<h2>５．文字がゆらゆら揺れるようなアニメーション</h2>
+			<p class="p5">テキスト</p>
+			<h4>ソースコード＞
+
+				.p5 { animation: hane 5s infinite;
+					 background-color:#ff8250;
+				  opacity: 1;
+				}
+				@keyframes hane {
+				  0%, 40% {
+					transform: skew(0deg, 0deg);
+				  }
+				  5% {
+					transform: skew(5deg, 5deg);
+				  }
+				  10% {
+					transform: skew(-4deg, -4deg);
+				  }
+				  15% {
+					transform: skew(3deg, 3deg);
+				  }
+				  20% {
+					transform: skew(-2deg, -2deg);
+				  }
+				  25% {
+					transform: skew(1deg, 1deg);
+				  }
+				  30% {
+					transform: skew(-0.6deg, -0.6deg);
+				  }
+				  35% {
+					transform: skew(0.3deg, 0.3deg);
+				  }
+				}
+			</h4>
+			<h2>６．カーソルを合わせると文字色が変わるアニメーション</h2>
+			<p class="p6">テキスト</p>
+			<h4>↑カーソルをテキストに合わせみてください！</h4>
+			<h4>ソースコード＞
+
+				.p6 {
+					background-color:#aed5d8;
+				  color: #000000;
+				  transition: 0.1s;
+				}
+				.p6:hover {
+				  color: #ff0000;
+				}
+			</h4>
+			<h2>７．押すと色が変わるボタンみたいなアニメーション</h2>
+			<p class="p7">テキスト</p>
+			<h4>↑カーソルを合わせてクリックしてみてください！</h4>
+			<h4>ソースコード＞
+
+				.p7 {
+				  color: rgb(0, 0, 0);
+				  background-color: #2196f3;
+				  position: relative;
+				 
+				  transition: background-color 0.1s;
+				}
+				.p7:hover {
+				  background-color: #f664c5;
+				}
+				.p7:active {
+				  background-color: #ff0800;
+				  
+				}
+			</h4>
+
+		
+	</body>
+	</html>
+	
+		
